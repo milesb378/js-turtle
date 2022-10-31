@@ -44,6 +44,61 @@ function main()
     forward(50)
     pendown()
 
+    //L//
     left(90)
     forward(150)
-}
+
+    penup()
+    left(180)
+    forward(150)
+    left(90)
+    forward(50)
+    left(90)
+    forward(75)
+
+    //e//
+    right(90)
+    pendown()
+    forward(75)
+    left(90)
+    forward(75)
+    left(90)
+    forward(75)
+    left(90)
+    forward(150)
+    left(90)
+    forward(75)
+    penup()
+
+    left(90)
+    forward(150)
+    right(90)
+    forward(115)
+    right(180)
+
+    //s//
+    pendown()
+    forward(75)
+    left(90)
+    forward(75)
+    left(90)
+    forward(75)
+    right(90)
+    forward(75)
+    right(90)
+    forward(75)
+
+    //beginning//
+    goto(0,0)
+    width(2)
+    colour(255,0,0,1)
+    forward(100)
+    right(120)
+    forward(100)
+    right(120)
+    forward(100)
+    left(40)
+    forward(10)
+    left(20)
+    forward(120)
+} 
