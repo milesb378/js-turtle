@@ -370,7 +370,12 @@ document.querySelector('#runButton').addEventListener('click', function() {
         commandBox.value = '';
     }
 });
-
+document.querySelector('#stopButton').addEventListener("click", function(){ 
+    var highestTimeoutId = setTimeout(";");
+    for (var i = 0 ; i < highestTimeoutId ; i++) {
+        clearTimeout(i); 
+    } 
+});
 // Execute a function when the user presses a key on the keyboard
 document.querySelector('#command').addEventListener("keypress", function(event) {
     // If the user presses the "Enter" key on the keyboard

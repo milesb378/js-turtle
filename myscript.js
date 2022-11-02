@@ -1,7 +1,6 @@
 function main()
 {
-    console.log("Hello, world");
-    //Getting Into Position//
+    //getting ready//
     penup()
     width(5)
     left(90)
@@ -101,4 +100,5 @@ function main()
     forward(10)
     left(20)
     forward(120)
-} 
+    forward(100);
+}

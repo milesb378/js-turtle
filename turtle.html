@@ -4,8 +4,9 @@
       <title>Javascript Turtle Sandbox</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link type="text/css" rel="stylesheet" href="turtle.css" />
-   </head>
+   </head> 
    <body>
+
          <h1>Javascript Turtle Sandbox</h1>
          <div class="container">
             <div class="row">
@@ -41,14 +42,16 @@
             </code>
          </div> <!-- leftcolumn -->
          <div class="col-sm">
-            <h4>Canvas</h4>
+            <h4>Canvas <button style="float:right;" id="stopButton" type="button" class="btn btn-outline-danger">Stop</button><br></h4>
             <canvas id="turtlecanvas" width="500" height="500"></canvas>
             <canvas id="imagecanvas" width="500" height="500" style="display:none"></canvas>
             <h4>Command</h4>
                <input type="text" style="width:300px;" id="command" value="demo()"/>
 	    <br/>
+       <br><img height=150 style="float:right" src="images/turtle.png">
        <button id="runButton" type="button" class="btn btn-success">Run Command</button>
 	    <button id="resetButton" type="button" class="btn btn-danger">Reset Canvas</button><br>
+       
        <br>
        <h4>Script</h4>
        <input type="text" id="scriptName" style="width:300px;" value="myscript.js"/>
@@ -66,16 +69,16 @@
 // For example:
 
 function square(side) {
-   repeat(4, function () {
+   for(var i = 0; i < 4; i++){
       forward(side);
       right(90);
-   });
+   }
 }
 
 function demo() {
    hideTurtle();
    colour(0,0,255,1);
-   for(s = 100; s > 0; s -= 10) {
+   for(var s = 100; s > 0; s -= 10) {
       square(s);
       right(36);
    }
