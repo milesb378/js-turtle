@@ -1,12 +1,13 @@
 function main()
 {
+    //canvas setup
     wrap(false);
     var rightSide = getWidth()/2
     var leftSide = -getWidth()/2
     var top = getHeight()/2
     var bottom = -getHeight()/2
 
-    //draw bottom blocks
+    // //draw bottom blocks
     goto(leftSide, bottom)
     brickBlock(50)
     goto(-200,-250)
@@ -21,16 +22,28 @@ function main()
     brickBlock(50)
     goto(200,-150)
     brickBlock(50)
-    goto(-175,100)
-    draw_circle(1)
+    goto(-175,200)
 
+    //drawing a cloud
+    pendown()
+    circle(.75);
+    left(135)
+    circle(.75);
+    left(90)
+    circle(.75);
+    left(135)
+    circle(.75);
+    left(135)
+    circle(.75);
+    left(90)
+    circle(.75);
 }
 
-function draw_circle(size)
+function circle(size)
 {
-    for (var i = 0; i < 360; i++)
+    for (var i = 0; i < 180; i++)
     {
-        width(10);
+        width(2);
         forward(size);
         right(1);
     }
