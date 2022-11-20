@@ -7,7 +7,19 @@ function main()
     var top = getHeight()/2
     var bottom = -getHeight()/2
 
-    // //draw bottom blocks
+    //get numver of bricks to draw from user
+    //numSquares = 10;
+
+    //calculate the side length
+    // sideLength = getWidth()/numSquares;
+    // brickBlock(50);
+    // for (var i = 0; i < numSquares; i++)
+    // {
+    //     brickBlock(sideLength);
+    //     strafe(sideLength);
+    // }
+
+    //draw bottom blocks
     goto(leftSide, bottom)
     brickBlock(50)
     goto(-200,-250)
@@ -24,7 +36,61 @@ function main()
     brickBlock(50)
     goto(-175,200)
 
-    //drawing a cloud
+    //draws a cloud
+    cloud()
+   //draws the question mark
+    goto(150,0)
+    questionBlock()
+    //returns to center
+    goto(0,0)
+    left(180)
+}
+// QUESTION BLOCK by Marie Sheets
+
+function questionBlock(sideLength){
+    questionBackground(sideLength);
+    questionMark(sideLength);
+}
+
+function questionBackground(){
+    strafe(sideLength / 2);
+    width(sideLength);
+    colour(255, 233, 0,1);
+    forward(sideLength);
+    penup();
+    left(180);
+    forward(sideLength);
+    left(180);
+    width(2);
+    colour(0,0,0,1);
+}
+
+//draws QuestionMark
+function questionMark()
+{
+    forward(sideLength/6);
+    pendown();
+    forward(sideLength/12);
+    penup();
+    forward(sideLength/14);
+    pendown();
+    forward(sideLength/12);
+    right(90);
+    for (var i = 0; i < 270; i++)
+    {
+        width(1);
+        forward(sideLength/300);
+        left(1);
+    }
+}
+
+function cloud()
+/* 
+   Cloud by Miles
+    This draws a cloud
+*/
+{
+    //this draws a circle and then turns left to get into another position multiple times. 
     pendown()
     circle(.75);
     left(135)
@@ -37,9 +103,11 @@ function main()
     circle(.75);
     left(90)
     circle(.75);
+    left(135)
 }
 
 function circle(size)
+//this defines the semi-circles making up the cloud.
 {
     for (var i = 0; i < 180; i++)
     {
@@ -48,7 +116,12 @@ function circle(size)
         right(1);
     }
 }
-
+/*
+    This is the end of the cloud code
+*/
+/*
+    This is the end of the cloud code
+*/
 
 /*
       * BRICK BLOCK by Phil Bowman
